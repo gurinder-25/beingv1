@@ -1,10 +1,11 @@
 # BeingOne - Daily Tracker
 
-A beautiful dark-themed daily tracking app for logging gratitude and daily habits. Built with React + TypeScript + Vite, featuring the same sleek design as the original BeingOne meditation app.
+A beautiful dark-themed daily tracking PWA for logging gratitude and daily habits. Built with React + TypeScript + Vite, featuring the same sleek design as the original BeingOne meditation app.
 
 ## Features
 
-- **Daily Gratitude Journaling**: Log 3 things you're grateful for each day
+- **Progressive Web App (PWA)**: Install on any device, works offline
+- **Daily Gratitude Journaling**: Log 3 things you're grateful for each day (with typing animation!)
 - **Habit Tracking**: Track 6 daily habits:
   - Meditate
   - Slept well
@@ -18,17 +19,26 @@ A beautiful dark-themed daily tracking app for logging gratitude and daily habit
 
 ## Getting Started
 
-1. Install dependencies:
+### 1. Install dependencies:
 ```bash
 npm install
 ```
 
-2. Run the development server:
+### 2. Generate PWA Icons (Important!)
+Open `public/generate-icons.html` in your browser and save the icons as `icon-192.png` and `icon-512.png` in the `public` folder.
+
+See [PWA_SETUP.md](./PWA_SETUP.md) for detailed instructions.
+
+### 3. Run the development server:
 ```bash
 npm run dev
 ```
 
-3. Open your browser to the URL shown (usually http://localhost:5173)
+### 4. Install the app:
+- Desktop: Look for the install icon (⊕) in the Chrome address bar
+- Mobile: Tap Share > Add to Home Screen
+
+Open your browser to the URL shown (usually http://localhost:5173)
 
 ## Build for Production
 
