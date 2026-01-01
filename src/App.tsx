@@ -1,4 +1,4 @@
-import { useState, useEffect, useRef } from 'react';
+import { useState, useEffect } from 'react';
 import { DailyGratitude } from './components/DailyGratitude';
 import { DailyChecklist } from './components/DailyChecklist';
 import { Dashboard } from './components/Dashboard';
@@ -16,14 +16,12 @@ type Screen = 'welcome' | 'gratitude' | 'checklist' | 'dashboard' | 'profile';
 function App() {
   const [currentScreen, setCurrentScreen] = useState<Screen>('welcome');
   const [tempGratitude, setTempGratitude] = useState('');
-  const [username, setUsername] = useState('');
   const [inputUsername, setInputUsername] = useState('');
 
   useEffect(() => {
     // Check if user exists
     const profile = getUserProfile();
     if (profile) {
-      setUsername(profile.username);
       // Check if they've completed today's entry
       if (hasCompletedToday()) {
         setCurrentScreen('dashboard');
@@ -42,7 +40,6 @@ function App() {
         joinedDate: getTodayDate(),
       };
       saveUserProfile(newProfile);
-      setUsername(inputUsername.trim());
       setCurrentScreen('gratitude');
     }
   };
