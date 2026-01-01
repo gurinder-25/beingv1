@@ -2,15 +2,18 @@
 
 Your BeingOne app is now configured as a Progressive Web App (PWA)! Follow these steps to make it installable.
 
-## Step 1: Generate App Icons
+## Step 1: Generate All PWA Assets (Icons + Screenshots)
 
-You have 3 options:
-
-### Option A: Use the Icon Generator (Easiest)
+### Use the Asset Generator (Easiest & Recommended)
 1. Open `public/generate-icons.html` in your browser
-2. Right-click on each canvas and select "Save image as..."
-3. Save as `icon-192.png` and `icon-512.png` in the `public` folder
-4. Done!
+2. Click the "✨ Generate All Assets ✨" button
+3. Right-click on each canvas and select "Save image as..."
+4. Save with these EXACT names in the `public` folder:
+   - `icon-192.png` (192x192)
+   - `icon-512.png` (512x512)
+   - `screenshot-mobile.png` (390x844)
+   - `screenshot-desktop.png` (1280x720)
+5. Done!
 
 ### Option B: Use Online Tool
 1. Go to https://www.pwabuilder.com/imageGenerator
@@ -49,17 +52,26 @@ npm run preview
 ## Requirements for PWA Install Prompt
 
 ✅ HTTPS (or localhost for testing)
-✅ Valid manifest.json
+✅ Valid manifest.json with screenshots
 ✅ Service worker registered
-✅ 192x192 and 512x512 icons
+✅ Square PNG icons (192x192 and 512x512)
+✅ Screenshots (mobile narrow + desktop wide)
 ✅ Valid start_url
 
 ## Files Created
 
-- `public/manifest.json` - PWA configuration
+- `public/manifest.json` - PWA configuration with icons & screenshots
 - `public/sw.js` - Service worker for offline support
 - `index.html` - Updated with PWA meta tags
-- `public/generate-icons.html` - Icon generator tool
+- `public/generate-icons.html` - Asset generator (icons + screenshots)
+
+## Required Assets (Generate these!)
+
+You need to create 4 PNG files:
+- ✅ `icon-192.png` - Square app icon (192x192)
+- ✅ `icon-512.png` - Square app icon (512x512)
+- ✅ `screenshot-mobile.png` - Mobile screenshot (390x844)
+- ✅ `screenshot-desktop.png` - Desktop screenshot (1280x720)
 
 ## Testing
 
